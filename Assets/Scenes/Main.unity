@@ -293,6 +293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1812678923}
+  eqVisible: 0
+  eq: {fileID: 1371968265}
 --- !u!114 &165919545
 MonoBehaviour:
   m_ObjectHideFlags: 0
