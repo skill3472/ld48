@@ -180,7 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneWindow: {fileID: 1563066823}
-  player: {fileID: 0}
+  player: {fileID: 165919539}
+  cursors:
+  - {fileID: 2800000, guid: 51f6c4aa5eef83546ae21ce668be0777, type: 3}
+  - {fileID: 2800000, guid: eb11f79aecd89a4448b93be20a7cf8c2, type: 3}
 --- !u!1 &165919539
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d9a85df827b674c9cfecf15cf731c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
 --- !u!4 &1563351045
 Transform:
   m_ObjectHideFlags: 0
