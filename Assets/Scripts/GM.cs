@@ -7,6 +7,7 @@ public class GM : MonoBehaviour
 
     [SerializeField] private GameObject cutsceneWindow;
     private bool cutsceneOn;
+    [SerializeField] public GameObject player;
 
     // Start is called before the first frame update
     void Start()
