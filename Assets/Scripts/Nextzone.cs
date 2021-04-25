@@ -7,11 +7,13 @@ public class Nextzone : MonoBehaviour
 
     [SerializeField] private GM gm;
 
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
-        /*
-            Change mouse cursor to a different one here
-        */
+        gm.ChangeCursor(1);
+    }
+    private void OnMouseExit()
+    {
+        gm.ChangeCursor(0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
