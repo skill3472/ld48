@@ -21,11 +21,16 @@ public class Lootable : MonoBehaviour
     [SerializeField] private Vector2 mousePos;
     [SerializeField] private float mouseDistance;
     [SerializeField] private GameObject nextzone;
+    [SerializeField]
+    private bool killMe;
 
 
     private void Awake()
     {
-
+        if(gameObject.GetComponent<EdgeCollider2D>() != null)
+        {
+            killMe = true;
+        }
     }
     private void Update()
     {
@@ -41,15 +46,17 @@ public class Lootable : MonoBehaviour
                         playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
                         isEmpty = true;
                         gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
-                        if (isEnder) nextzone.SetActive(true);
+                        if(isEnder) nextzone.SetActive(true);
+                    if (killMe) Destroy(GetComponent<Collider2D>());
                 }   else if (playerInventory.CheckForItem(gameObject.GetComponent<Keyhole>().reqItemID) != null)
                     {
                         gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
                         playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
                         isEmpty = true;
                         gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
-                    if (isEnder) nextzone.SetActive(true);
-                    }
+                    if(isEnder) nextzone.SetActive(true);
+                    if (killMe) Destroy(GetComponent<Collider2D>());
+                }
                 }
             }
     }
