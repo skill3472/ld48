@@ -23,13 +23,19 @@ public class Lootable : MonoBehaviour
     [SerializeField] private GameObject nextzone;
     [SerializeField]
     private bool killMe;
+    private GameObject ender;
 
 
     private void Awake()
-    {
+    {   
         if(gameObject.GetComponent<EdgeCollider2D>() != null)
         {
             killMe = true;
+        }
+        
+        if(gm.gameObject.GetComponent<EndScene>() != null)
+        {
+            ender = gm.GetComponent<EndScene>().cutscene; 
         }
     }
     private void Update()
