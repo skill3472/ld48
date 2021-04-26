@@ -9,6 +9,7 @@ public class Lootable : MonoBehaviour
     public bool isEmpty;
     public int itemId;
     public string soundToPlay;
+    public bool isEnder;
     [Space]
     [Header("Lootable texture")]
     public Sprite afterImage;
@@ -16,27 +17,41 @@ public class Lootable : MonoBehaviour
     [Header("References")]
     public GM gm;
     public Transform playerT;
+    public Inventory playerInventory;
     [SerializeField] private Vector2 mousePos;
     [SerializeField] private float mouseDistance;
+    [SerializeField] private GameObject nextzone;
 
+
+    private void Awake()
+    {
+
+    }
     private void Update()
     {
         mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         mouseDistance = Vector2.Distance(mousePos, playerT.position);
-
-        if(mouseDistance < 3)
-        {
-            if(Input.GetButtonDown("Interact") && !isEmpty)
+            if (mouseDistance < 3)
             {
-                gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
-                playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
-                isEmpty = true;
-                gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
-            } else if(Input.GetButtonDown("Interact"))
-            {
-                gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
+                if (Input.GetButtonDown("Interact") && !isEmpty)
+                {
+                    if (gameObject.GetComponent<Keyhole>() == null)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
+                        playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
+                        isEmpty = true;
+                        gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
+                        if (isEnder) nextzone.SetActive(true);
+                }   else if (playerInventory.CheckForItem(gameObject.GetComponent<Keyhole>().reqItemID) != null)
+                    {
+                        gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
+                        playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
+                        isEmpty = true;
+                        gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
+                    if (isEnder) nextzone.SetActive(true);
+                    }
+                }
             }
-        }
     }
 
 }
