@@ -1,4 +1,4 @@
-# ld48
+# Clown Pup - A Ludum Dare 48 submission
 ### Our submission to the Ludum Dare 48 game jam.
 
 Made by:
