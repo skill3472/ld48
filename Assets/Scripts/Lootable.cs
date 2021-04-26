@@ -8,6 +8,7 @@ public class Lootable : MonoBehaviour
     [Header("Lootable settings")]
     public bool isEmpty;
     public int itemId;
+    public string soundToPlay;
     [Space]
     [Header("Lootable texture")]
     public Sprite afterImage;
@@ -30,6 +31,7 @@ public class Lootable : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
                 playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
                 isEmpty = true;
+                gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
             } else if(Input.GetButtonDown("Interact"))
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
