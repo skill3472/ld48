@@ -899,7 +899,6 @@ GameObject:
   - component: {fileID: 1114593954}
   - component: {fileID: 1114593957}
   - component: {fileID: 1114593956}
-  - component: {fileID: 1114593958}
   m_Layer: 0
   m_Name: Clown
   m_TagString: Untagged
@@ -1009,28 +1008,6 @@ MonoBehaviour:
   mouseDistance: 0
   nextzone: {fileID: 1563351042}
   killMe: 0
---- !u!68 &1114593958
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114593953}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.4074347, y: 5.5037365}
-  - {x: -1.4563737, y: -4.268449}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1371968265
 GameObject:
   m_ObjectHideFlags: 0
