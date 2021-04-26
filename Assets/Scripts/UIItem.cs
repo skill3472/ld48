@@ -10,7 +10,7 @@ public class UIItem : MonoBehaviour
 
     private void Awake()
     {
-        spriteImage = GetComponent<Image>();
+        spriteImage = GetComponentInChildren<Image>();
     }
 
     public void UpdateItem(Item item)
