@@ -51,7 +51,7 @@ public class Lootable : MonoBehaviour
                         gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
                         playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
                         isEmpty = true;
-                        gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
+                        gm.am.Play(soundToPlay);
                         if(isEnder) nextzone.SetActive(true);
                     if (killMe) Destroy(GetComponent<Collider2D>());
                 }   else if (playerInventory.CheckForItem(gameObject.GetComponent<Keyhole>().reqItemID) != null)
@@ -59,7 +59,7 @@ public class Lootable : MonoBehaviour
                         gameObject.GetComponent<SpriteRenderer>().sprite = afterImage;
                         playerT.gameObject.GetComponent<Inventory>().GiveItem(itemId);
                         isEmpty = true;
-                        gm.gameObject.GetComponent<AudioManager>().Play(soundToPlay);
+                        gm.am.GetComponent<AudioManager>().Play(soundToPlay);
                     if(isEnder) nextzone.SetActive(true);
                     if (killMe) Destroy(GetComponent<Collider2D>());
                 }

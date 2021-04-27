@@ -205,7 +205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &25238612
 MonoBehaviour:
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEmpty: 0
   itemId: 1
-  soundToPlay: trashbag_rip
+  soundToPlay: TrashbagRip
   isEnder: 0
   afterImage: {fileID: 21300000, guid: eed3c73151ddcf641bde64ff51efdf16, type: 3}
   gm: {fileID: 52255009}
@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 52255008}
   - component: {fileID: 52255007}
   - component: {fileID: 52255009}
-  - component: {fileID: 52255010}
   m_Layer: 0
   m_Name: _GM
   m_TagString: Untagged
@@ -306,74 +305,7 @@ MonoBehaviour:
   cursors:
   - {fileID: 2800000, guid: 51f6c4aa5eef83546ae21ce668be0777, type: 3}
   - {fileID: 2800000, guid: eb11f79aecd89a4448b93be20a7cf8c2, type: 3}
---- !u!114 &52255010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52255006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deeda725de69ed6488ebb6a44329bdd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixerGroup: {fileID: 0}
-  sounds:
-  - name: BodyReveal
-    clip: {fileID: 8300000, guid: b8880deed288c5f409b1d791d24d9270, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 0.1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: BoneBreak
-    clip: {fileID: 8300000, guid: e1dbb81fb31fa4d419f0465fad9dce2f, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: ItemPickup
-    clip: {fileID: 8300000, guid: 14c09c48ffb0fb34f9610a58ed51beee, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: 1Ambience
-    clip: {fileID: 8300000, guid: f6670d74efa7c4246bdca354c85907d2, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 1
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: TissueBurn
-    clip: {fileID: 8300000, guid: 161594a3b7e280742aa34115659c2659, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: TrashbagRip
-    clip: {fileID: 8300000, guid: 8b98d06cd343ad84a8a0318734d1c70f, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
+  am: {fileID: 0}
 --- !u!1 &165919539
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &165919541
 MonoBehaviour:
@@ -718,7 +650,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561008800
 GameObject:
@@ -752,7 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEmpty: 0
   itemId: 0
-  soundToPlay: bone_break
+  soundToPlay: BoneBreak
   isEnder: 0
   afterImage: {fileID: 21300000, guid: b42bff283900bd44891f6b97cfeecc46, type: 3}
   gm: {fileID: 52255009}
@@ -825,7 +757,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &744000278
 GameObject:
@@ -887,6 +819,168 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1 &781721498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781721500}
+  - component: {fileID: 781721499}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781721499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781721498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deeda725de69ed6488ebb6a44329bdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+  sounds:
+  - name: BodyReveal
+    clip: {fileID: 8300000, guid: b8880deed288c5f409b1d791d24d9270, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: BoneBreak
+    clip: {fileID: 8300000, guid: e1dbb81fb31fa4d419f0465fad9dce2f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: ItemPickup
+    clip: {fileID: 8300000, guid: 14c09c48ffb0fb34f9610a58ed51beee, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: OST
+    clip: {fileID: 8300000, guid: c1f1da296e7712846b8b351a3984cf4b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: TissueBurn
+    clip: {fileID: 8300000, guid: 161594a3b7e280742aa34115659c2659, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: TrashbagRip
+    clip: {fileID: 8300000, guid: 8b98d06cd343ad84a8a0318734d1c70f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: BigClown
+    clip: {fileID: 8300000, guid: eae5a56414ba41644b7d9a4728b2a46c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: BigClownAmbient
+    clip: {fileID: 8300000, guid: b0860504227c50c459ff48644de5b5ef, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: DyingFrog
+    clip: {fileID: 8300000, guid: 3d8bc4624c8bd5d44851d33bdd65e09e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: Snake
+    clip: {fileID: 8300000, guid: 43d98f8147d05644ea09cc29342e51ea, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: BubuHappy
+    clip: {fileID: 8300000, guid: 96f20426e89a01a42b0cb982afaa6b36, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: Children
+    clip: {fileID: 8300000, guid: 2722682defb04e04692ed65d141755bc, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+  - name: Target
+    clip: {fileID: 8300000, guid: b6e153808e7ef994b94d159c16e3877b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 371c8e4483f77334abaad6f4d8d782d9, type: 2}
+    source: {fileID: 0}
+--- !u!4 &781721500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781721498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2056603, y: -1.7798448, z: -228.07375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371968265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1138,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1504011234
 GameObject:
@@ -1128,7 +1222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1504011237
 MonoBehaviour:
@@ -1157,7 +1251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEmpty: 0
   itemId: 0
-  soundToPlay: tissue_paper_burn
+  soundToPlay: TissueBurn
   isEnder: 1
   afterImage: {fileID: 21300000, guid: a2b004264d0269340a416ebfd327d6f1, type: 3}
   gm: {fileID: 52255009}
@@ -1311,7 +1405,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812678922
 GameObject:
@@ -1341,7 +1435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1929030209
 GameObject:
@@ -1445,7 +1539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2027394897
 SpriteRenderer:
@@ -1608,7 +1702,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046747340
 GameObject:
@@ -1692,7 +1786,7 @@ Transform:
   - {fileID: 1929030210}
   - {fileID: 314015462}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127375195
 GameObject:
@@ -1788,7 +1882,7 @@ RectTransform:
   - {fileID: 1371968266}
   - {fileID: 1563066824}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

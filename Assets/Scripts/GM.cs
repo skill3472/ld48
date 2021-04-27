@@ -11,18 +11,22 @@ public class GM : MonoBehaviour
     [SerializeField] public GameObject player;
     [Space]
     public List<Texture2D> cursors;
+    public AudioManager am;
 
     // Start is called before the first frame update
     void Start()
     { 
         cutsceneWindow.SetActive(true);
         cutsceneOn = true;
+        if (am == null) am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        am.Play("OST");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKeyDown && cutsceneOn)
+        if (am == null) am = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        if (Input.anyKeyDown && cutsceneOn)
         {
             cutsceneOn = false;
             cutsceneWindow.SetActive(false);
