@@ -41,8 +41,8 @@ public class Lootable : MonoBehaviour
     private void Update()
     {
         mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-        mouseDistance = Vector2.Distance(mousePos, playerT.position);
-            if (mouseDistance < 3)
+        mouseDistance = Vector2.Distance(mousePos, transform.position);
+            if (mouseDistance < 1)
             {
                 if (Input.GetButtonDown("Interact") && !isEmpty)
                 {
