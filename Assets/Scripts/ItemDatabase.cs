@@ -20,11 +20,12 @@ public class ItemDatabase : MonoBehaviour
     void BuildDatabase()
     {
         items = new List<Item>() {
-            new Item(0), //NULL:
-            new Item(1), //NULL
-            new Item(2), //NULL
-            new Item(3), //NULL
-            new Item(4) //NULL
+            new Item(0), //Bone
+            new Item(1), //Lighter
+            new Item(2), //Hat
+            new Item(3), //Snake
+            new Item(4), //Rock
+            new Item(5)  //Gift
 
 
         };
