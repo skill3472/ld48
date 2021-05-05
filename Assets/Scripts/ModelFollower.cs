@@ -15,5 +15,12 @@ public class ModelFollower : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = player.position;
+        if(player.rotation.z > 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        } else
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }
